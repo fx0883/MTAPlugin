@@ -1,7 +1,28 @@
 {
-  "name": "cordova-plugin-superappmta",
-  "version": "0.0.1",
-  "description": "mta plugin",
+  "_from": "cordova-plugin-superappmta",
+  "_id": "cordova-plugin-superappmta@0.0.2",
+  "_inBundle": false,
+  "_location": "/MTAPlugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-superappmta",
+    "name": "cordova-plugin-superappmta",
+    "escapedName": "cordova-plugin-superappmta",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_spec": "cordova-plugin-superappmta",
+  "author": {
+    "name": "xuan"
+  },
+  "bundleDependencies": false,
   "cordova": {
     "id": "cordova-plugin-superappmta",
     "platforms": [
@@ -9,11 +30,25 @@
       "ios"
     ]
   },
+  "deprecated": false,
+  "description": "a cordova plugin, a JS version of mta",
+  "homepage": "https://github.com/fx0883/MTAPlugin",
   "keywords": [
     "ecosystem:cordova",
     "cordova-android",
-    "cordova-ios"
+    "cordova-ios",
+    "cordova-plugin-superappmta",
+    "mtastatistics",
+    "qqstatistics",
+    "腾讯移动统计",
+    "mta"
   ],
-  "author": "Xuan",
-  "license": "MIT"
+  "license": "ISC",
+  "name": "cordova-plugin-superappmta",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fx0883/MTAPlugin.git"
+  },
+  "version": "0.0.2"
 }
+
