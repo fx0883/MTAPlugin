@@ -1,9 +1,9 @@
 {
-  "name": "com.cordovapluginmta.app2",
+  "name": "cordova-plugin-superappmta",
   "version": "0.0.1",
   "description": "mta plugin",
   "cordova": {
-    "id": "com.cordovapluginmta.app2",
+    "id": "cordova-plugin-superappmta",
     "platforms": [
       "android",
       "ios"
@@ -15,5 +15,5 @@
     "cordova-ios"
   ],
   "author": "Xuan",
-  "license": "ISC"
+  "license": "MIT"
 }
