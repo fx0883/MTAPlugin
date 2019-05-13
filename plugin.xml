@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-superappmta" version="0.0.1" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>MTAPlugin</name>
+    <preference name="IOSAPPID" />
+    <preference name="ANDROIDAPPID" />
+    <js-module name="MTAPlugin" src="www/MTAPlugin.js">
+        <clobbers target="MTAPlugin" />
+    </js-module>
+    <!-- <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="MTAPlugin">
+                <param name="android-package" value="com.cordovapluginmta.app2.MTAPlugin" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+        <source-file src="src/android/MTAPlugin.java" target-dir="src/com/cordovapluginmta/app2/MTAPlugin" />
+    </platform> -->
+ <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="MTAPlugin">
+                <param name="android-package" value="org.apache.cordova.superappmta.MTAPlugin" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <!-- MTA必须的权限 -->
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+            <!-- MTA可选的权限，请根据实际情况处理 -->
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+            <!-- LBS增值功能权限，请根据实际情况处理 -->
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission android:name="android.permission.GET_TASKS" />
+            <uses-permission android:name="android.permission.VIBRATE" />
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <meta-data android:name="TA_APPKEY" android:value="$ANDROIDAPPID" />
+            <meta-data android:name="InstallChannel" android:value="应用宝2" />
+        </config-file>
+        <framework src="src/android/plugin.gradle" custom="true" type="gradleReference" />
+        <source-file src="src/android/MTAPlugin.java" target-dir="src/org/apache/cordova/superappmta"/>
+         <source-file src="src/android/libs/mta-android-sdk-3.4.7.jar" target-dir="libs" 
+        />
+         <source-file src="src/android/libs/mid-sdk-4.06.jar" target-dir="libs" 
+        />
+    </platform>
+
+        <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="MTAPlugin">
+                <param name="ios-package" value="MTAPlugin" />
+            </feature>
+            <preference name="TA_APPKEY" value="$IOSAPPID" />
+        </config-file>
+        <header-file src="src/ios/libs/MTA.h" />
+        <header-file src="src/ios/libs/MTAConfig.h" />
+        <header-file src="src/ios/libs/MTA+Account.h" />
+        <source-file src="src/ios/MTAPlugin.m" />
+        <source-file src="src/ios/libs/libmtasdk.a" framework="true"/>
+        <framework src="libz.tbd" weak="true" />
+        <framework src="libsqlite3.tbd" weak="true" />
+        <framework src="QuartzCore.framework" weak="true" />
+        <framework src="Security.framework" weak="true" />
+        <framework src="CFNetwork.framework" weak="true" />
+        <framework src="SystemConfiguration.framework" weak="true" />
+        <framework src="CoreTelephony.framework" weak="true" />
+        <framework src="UIKit.framework" weak="true" />
+        <framework src="Foundation.framework" weak="true" />
+        <framework src="CoreGraphics.framework" weak="true" />
+        <framework src="libmtasdk.a" weak="true" />
+    </platform>
+</plugin>

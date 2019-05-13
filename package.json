@@ -1,0 +1,19 @@
+{
+  "name": "com.cordovapluginmta.app2",
+  "version": "0.0.1",
+  "description": "mta plugin",
+  "cordova": {
+    "id": "com.cordovapluginmta.app2",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "Xuan",
+  "license": "ISC"
+}
