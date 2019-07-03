@@ -39,8 +39,8 @@
 }
 
 - (void)initMTA {
-    // [MTA startWithAppkey:APP_ID];
-    //[MTA setEnableDebugOn:YES];
+    [MTA startWithAppkey:APP_ID];
+    [MTA setEnableDebugOn:YES];
 }
 
 - (void)onPageStart:(CDVInvokedUrlCommand*)command

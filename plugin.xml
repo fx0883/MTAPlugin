@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-superappmta" version="0.0.1" 
+<plugin id="cordova-plugin-superappmta" version="0.0.2" 
     xmlns="http://apache.org/cordova/ns/plugins/1.0" 
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>MTAPlugin</name>
@@ -8,15 +8,6 @@
     <js-module name="MTAPlugin" src="www/MTAPlugin.js">
         <clobbers target="MTAPlugin" />
     </js-module>
-    <!-- <platform name="android">
-        <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="MTAPlugin">
-                <param name="android-package" value="com.cordovapluginmta.app2.MTAPlugin" />
-            </feature>
-        </config-file>
-        <config-file parent="/*" target="AndroidManifest.xml" />
-        <source-file src="src/android/MTAPlugin.java" target-dir="src/com/cordovapluginmta/app2/MTAPlugin" />
-    </platform> -->
  <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="MTAPlugin">

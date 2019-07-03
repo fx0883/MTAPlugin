@@ -1,0 +1,1 @@
+cordova plugin add cordova-plugin-superappmta --variable IOSAPPID=IWPEA13M11DN --variable ANDROIDAPPID=A8N9K7J4DBCV
