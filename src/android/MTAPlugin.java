@@ -89,8 +89,11 @@ public class MTAPlugin extends CordovaPlugin {
                 callbackContext.error("eventId invalid, error");
                 return;
             }
-
-            StatService.trackCustomEvent(cordova.getActivity(), eventId, label);
+            Properties properties = new Properties();
+            properties.setProperty("customerid", label);
+            // 调用自定义事件接口
+            StatService.trackCustomKVEvent(cordova.getActivity(), eventId, properties);
+            // StatService.trackCustomEvent(cordova.getActivity(), eventId, label);
         } else if ("onPageStart".equals(action)) {
             String pageName = "";
             try {

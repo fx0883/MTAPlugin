@@ -85,7 +85,7 @@
         result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"please pass event and label"];
     }
     else {
-        [MTA trackCustomKeyValueEvent:[command argumentAtIndex:0] props:nil];
+        [MTA trackCustomKeyValueEvent:[command argumentAtIndex:0] props:@{ @"customerid": [command argumentAtIndex:0] }];
         result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     }
     
