@@ -34,7 +34,7 @@
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <meta-data android:name="TA_APPKEY" android:value="$ANDROIDAPPID" />
-            <meta-data android:name="InstallChannel" android:value="应用宝2" />
+            <meta-data android:name="InstallChannel" android:value="应用宝" />
         </config-file>
         <framework src="src/android/plugin.gradle" custom="true" type="gradleReference" />
         <source-file src="src/android/MTAPlugin.java" target-dir="src/org/apache/cordova/superappmta"/>
